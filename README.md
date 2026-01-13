@@ -16,6 +16,8 @@ I'm relatively new to Nostr and very open to feedback on this. The NIPs are mean
 
 1. ## NIP-XX: Strict Event Validation
 
+nip-xx-strict-event-validation.md
+
 ### Strict and uniform event validation
 
 This NIP grew out of trying to understand why certain edge cases keep showing up across different Nostr apps, even when everyone is "following NIP-01". The core issue seems to be that while NIP-01 defines the event format and cryptographic rules, it leaves a lot of room for interpretation in how events are validated, and in what order those checks are applied.
