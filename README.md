@@ -4,7 +4,7 @@
 
 # NIPs by Tim
 
-This repo contains draft NIPs and notes as I work through how clients and relays can be more predictable and interoperable. I’m building out proposals that focus on Nostr’s real-world behavior: what should be validated, when to reject, how to represent intent unambiguously, and how to keep implementations aligned even when the network is messy.
+This repo contains draft NIPs and notes as I work through how Nostr clients and relays can be more predictable and interoperable. I’m building out proposals that focus on Nostr’s real-world behavior: what should be validated, when to reject, how to represent intent unambiguously, and how to keep implementations aligned even when the network is messy.
 
 The NIPs here are intended to span a wide range of Nostr topics. Some will be narrow and technical (event validation, tag structure, relay acceptance rules), while others will be broader (client expectations, sync and reconciliation, moderation and permission signals, and the boundary between protocol guarantees and application policy). The common thread is making the implicit parts of Nostr explicit, so different implementations behave the same way without relying on heuristics or hidden assumptions.
 
