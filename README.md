@@ -4,11 +4,11 @@
 
 # NIPs by Tim
 
-This repo contains draft NIPs and notes as I work through how Nostr clients and relays can be more predictable and interoperable. I’m building out proposals that focus on Nostr’s real-world behavior: what should be validated, when to reject, how to represent intent unambiguously, and how to keep implementations aligned even when the network is messy.
+This repo contains draft NIPs and notes that apply techniques focused on stronger guarantees around identity, permissions, ordering, and durable state across peers to Nostr. I want to see where I can help those approaches improve Nostr without changing its spirit.
 
-The NIPs here are intended to span a wide range of Nostr topics. Some will be narrow and technical (event validation, tag structure, relay acceptance rules), while others will be broader (client expectations, sync and reconciliation, moderation and permission signals, and the boundary between protocol guarantees and application policy). The common thread is making the implicit parts of Nostr explicit, so different implementations behave the same way without relying on heuristics or hidden assumptions.
+The NIPs here are intended to span a wide range of Nostr topics. Some will be narrow and technical (event validation, tag structure, relay acceptance rules), while others will be broader (security boundaries, state and replay behavior, sync and reconciliation, moderation and permission signals, and the boundary between protocol guarantees and application policy). The common thread is making implicit assumptions explicit so implementations converge on the same behavior and security posture.
 
-I’m aiming to identify stable invariants, define clear validation and ordering pipelines, and document failure modes in a way that is testable and repeatable across clients and relays. The goal is not to centralize or over-specify, but to reduce ambiguity, prevent accidental divergence, and keep app logic smaller and more reliable.
+I am aiming to identify stable invariants, define clear validation and ordering pipelines, and document failure modes in a way that is testable and repeatable across clients and relays. The goal is not to centralize or over-specify, but to reduce ambiguity, prevent accidental divergence, and keep app logic smaller and more reliable.
 
 I'm relatively new to Nostr and very open to feedback on this. The NIPs are meant as a starting point for discussion, not a final answer. I'm especially interested in hearing where it overlaps with existing work, where it might be too strict, or where it does not fit the direction Nostr is heading or other NIPs or discussions I may have missed or misinterpreted.
 
