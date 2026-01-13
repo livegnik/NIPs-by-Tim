@@ -1,4 +1,7 @@
 ﻿
+
+
+
 # NIP-XX: Strict Event Validation
 
 `draft` `optional` `client` `relay`
