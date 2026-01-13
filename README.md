@@ -4,7 +4,7 @@
 
 # NIPs by Tim
 
-This repo contains [WIP] draft NIPs and notes that apply techniques focused on stronger guarantees around identity, permissions, ordering, and durable state across peers to Nostr. I want to see where I can help those approaches improve Nostr without changing its spirit.
+This repo contains draft NIPs [work in progress] and notes that apply techniques focused on stronger guarantees around identity, permissions, ordering, and durable state across peers to Nostr. I want to see where I can help those approaches improve Nostr without changing its spirit.
 
 The NIPs here are intended to span a wide range of Nostr topics. Some will be narrow and technical (event validation, tag structure, relay acceptance rules), while others will be broader (security boundaries, state and replay behavior, sync and reconciliation, moderation and permission signals, and the boundary between protocol guarantees and application policy). The common thread is making implicit assumptions explicit so implementations converge on the same behavior and security posture.
 
