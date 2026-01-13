@@ -1,6 +1,17 @@
+
+
+
+
 # NIPs by Tim
 
-This repo contains draft NIPs and notes, starting with an optional proposal on strict event validation.
+This repo contains draft NIPs and notes as I work through how clients and relays can be more predictable and interoperable. I’m building out proposals that focus on Nostr’s real-world behavior: what should be validated, when to reject, how to represent intent unambiguously, and how to keep implementations aligned even when the network is messy.
+
+The NIPs here are intended to span a wide range of Nostr topics. Some will be narrow and technical (event validation, tag structure, relay acceptance rules), while others will be broader (client expectations, sync and reconciliation, moderation and permission signals, and the boundary between protocol guarantees and application policy). The common thread is making the implicit parts of Nostr explicit, so different implementations behave the same way without relying on heuristics or hidden assumptions.
+
+I’m aiming to identify stable invariants, define clear validation and ordering pipelines, and document failure modes in a way that is testable and repeatable across clients and relays. The goal is not to centralize or over-specify, but to reduce ambiguity, prevent accidental divergence, and keep app logic smaller and more reliable.
+
+I'm relatively new to Nostr and very open to feedback on this. The NIPs are meant as a starting point for discussion, not a final answer. I'm especially interested in hearing where it overlaps with existing work, where it might be too strict, or where it does not fit the direction Nostr is heading or other NIPs or discussions I may have missed or misinterpreted.
+
 
 
 1. ## NIP-XX: Strict Event Validation
@@ -18,9 +29,3 @@ This NIP is not meant to solve ordering, convergence, or propagation issues. Tho
 This NIP does not introduce new event fields, new message types, or new relay behavior. Instead, it proposes a single, explicit validation pipeline for NIP-01 events, with clear stages and clear failure modes. The idea is that every event, whether inbound from the network or created locally, passes through the same sequence of checks before anything else happens.
 
 The goal is not to make Nostr more complex, but to reduce accidental complexity. By tightening and unifying validation early, clients and relays can rely on a shared definition of what a "valid event" is, and keep the rest of their code simpler and more predictable, regardless of how events propagate through the network.
-
-I’m relatively new to Nostr and very open to feedback on this. This NIP is meant as a starting point for discussion, not a final answer. I’m especially interested in hearing where it overlaps with existing work, where it might be too strict, or where it does not fit the direction Nostr is heading or other NIPs I may have missed or misinterpreted.
-
-
-
-2. ## NIP-XX: 
