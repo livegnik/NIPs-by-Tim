@@ -16,7 +16,7 @@ I'm relatively new to Nostr and very open to feedback on this. The NIPs are mean
 
 1. ## NIP-XX: Strict Event Validation
 
-nip-xx-strict-event-validation.md
+Link: [NIP-XX: Strict Event Validation](nip-xx-strict-event-validation.md)
 
 ### Strict and uniform event validation
 
