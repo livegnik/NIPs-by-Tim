@@ -14,7 +14,7 @@ The NIPs here are intended to span a wide range of Nostr topics. Some will be na
 
 I am aiming to identify stable invariants, define clear validation and ordering pipelines, and document failure modes in a way that is testable and repeatable across clients and relays. The goal is not to centralize or over-specify, but to reduce ambiguity, prevent accidental divergence, and keep app logic smaller and more reliable.
 
-I'm relatively new to Nostr and very open to feedback on this. The NIPs are meant as a starting point for discussion, not a final answer. I'm especially interested in hearing where it overlaps with existing work, where it might be too strict, or where it does not fit the direction Nostr is heading or other NIPs or discussions I may have missed or misinterpreted.
+I'm relatively new to the Nostr protocol specs and very open to feedback on this. The NIPs are meant as a starting point for discussion, not a final answer. I'm especially interested in hearing where it overlaps with existing work, where it might be too strict, or where it does not fit the direction Nostr is heading or other NIPs or discussions I may have missed or misinterpreted.
 
 <br><br>
 
