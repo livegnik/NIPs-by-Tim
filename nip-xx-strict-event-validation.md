@@ -347,6 +347,7 @@ function validate_strict(event, context):
   assert is_integer(event.created_at)
   assert is_integer(event.kind)
   assert 0 <= event.kind <= 65535
+  # optional: allow legacy float created_at in compatibility mode
 
   # 4. tags hashing constraint
   for tag in event.tags:
@@ -367,6 +368,7 @@ function validate_strict(event, context):
 
   # 7. standard tag grammar
   for tag in event.tags:
+    assert tag[0] != ""
     if tag[0] == "e":
       assert len(tag) >= 2
       assert is_lower_hex(tag[1], 64)
@@ -377,6 +379,7 @@ function validate_strict(event, context):
       assert is_lower_hex(tag[1], 64)
     if tag[0] == "a":
       assert len(tag) >= 2
+      # includes trailing colon for normal replaceable events
       assert matches_nip01_a_format(tag[1])
 
   # 8. contextual policy limits (optional)
