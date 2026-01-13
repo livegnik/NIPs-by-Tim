@@ -114,7 +114,9 @@ If any field fails these constraints, the event is invalid.
 
 If `created_at` or `kind` is not an integer, or if `kind` is out of range, the event is invalid.
 
-Note: this NIP chooses strict integer enforcement to avoid cross-language float and integer conversion differences. NIP-01 serialization uses numbers, but the semantics described for `created_at` and `kind` are integer-based.
+Note: this NIP chooses strict integer enforcement to avoid cross-language float and integer conversion differences. NIP-01 serialization uses numbers, but the semantics described for `created_at` and `kind` are integer-based. Very old events (roughly 2021–2022) occasionally used floating-point `created_at` values; strict implementations may reject those, or make this check configurable if backward compatibility is required.
+
+Note: the `kind` range here is the NIP-01 baseline. Some later NIPs use higher kind numbers in practice; strict implementations may choose to accept them or make the allowed range configurable.
 
 ### 5. Canonical `id` recomputation
 
@@ -218,7 +220,9 @@ If a standard tag fails its grammar, the event is invalid.
 
 Note: This NIP does not attempt to validate the meaning of non-standard tags, only their structural safety.
 
-Non-normative note: other NIPs define structured tags (for example, delegation in NIP-26). Implementations MAY add tag-specific validation for those tags. Strict validation here only mandates the `e`/`p`/`a` grammar plus safe structure for all tags.
+Non-normative note: the exact `a` tag address format is specified in NIP-33 and related NIPs (for example, NIP-16 and NIP-32). Implementations SHOULD refer to those documents for details.
+
+Non-normative note: other NIPs define structured tags (for example, delegation in NIP-26 or external identities in NIP-39). Implementations MAY add tag-specific validation for those tags. Strict validation here only mandates the `e`/`p`/`a` grammar plus safe structure for all tags.
 
 ### 8. Contextual policy limits
 
