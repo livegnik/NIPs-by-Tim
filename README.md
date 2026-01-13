@@ -61,4 +61,4 @@ A client receives an event where `tags` is present but contains an element that 
 #### What other NIPs this NIP relies on
 
 * NIP-01 (event format, serialization and signature rules).
-* XX2 (structured rejection reporting) if you want uniform failure codes, but XX1 can exist without it.
+* NIP-TIM-2 (structured rejection reporting) if you want uniform failure codes, but NIP-TIM-1 can exist without it.
