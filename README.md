@@ -24,7 +24,7 @@ I'm relatively new to the Nostr protocol specs and very open to feedback on this
 
 <br><br>
 
-## 1. NIP-XX: Strict Event Validation
+## 1. NIP-TIM-1: Strict Event Validation
 
 Link: [NIP-TIM-1: Strict Event Validation](nip-tim-1-strict-event-validation.md)
 
