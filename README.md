@@ -20,13 +20,13 @@ I'm relatively new to the Nostr protocol specs and very open to feedback on this
 
 ## Table of contents
 
-- [1. NIP-XX1: Strict Event Validation](#xx1-nip-xx1-strict-event-validation)
+- [1. NIP-TIM-1: Strict Event Validation](#xx1-nip-tim-1-strict-event-validation)
 
 <br><br>
 
 ## 1. NIP-XX: Strict Event Validation
 
-Link: [NIP-XX1: Strict Event Validation](nip-xx1-strict-event-validation.md)
+Link: [NIP-TIM-1: Strict Event Validation](nip-tim-1-strict-event-validation.md)
 
 ### Strict and uniform event validation
 
