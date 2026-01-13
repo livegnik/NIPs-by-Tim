@@ -13,14 +13,13 @@ I am aiming to identify stable invariants, define clear validation and ordering 
 I'm relatively new to Nostr and very open to feedback on this. The NIPs are meant as a starting point for discussion, not a final answer. I'm especially interested in hearing where it overlaps with existing work, where it might be too strict, or where it does not fit the direction Nostr is heading or other NIPs or discussions I may have missed or misinterpreted.
 
 
-
 ## 1. NIP-XX: Strict Event Validation
 
 Link: [NIP-XX: Strict Event Validation](nip-xx-strict-event-validation.md)
 
 ### Strict and uniform event validation
 
-This NIP grew out of trying to understand why certain edge cases keep showing up across different Nostr apps, even when everyone is "following NIP-01". The core issue seems to be that while NIP-01 defines the event format and cryptographic rules, it leaves a lot of room for interpretation in how events are validated, and in what order those checks are applied. The strict validation pipeline here is intended to run on clients, relays, or both, so they can make the same decisions about what is valid, safe to store, and safe to render.
+This NIP grew out of trying to understand why certain edge cases keep showing up across different Nostr apps, even when everyone is following NIP-01. The core issue seems to be that while NIP-01 defines the event format and cryptographic rules, it leaves a lot of room for interpretation in how events are validated, and in what order those checks are applied. The strict validation pipeline here is intended to run on clients, relays, or both, so they can make the same decisions about what is valid, safe to store, and safe to render.
 
 In practice, different clients and relays make slightly different assumptions about when an event is valid, when it is safe to store, and when it is safe to render. Those small differences tend to leak upward into app logic, where they show up as duplicates, replay handling, inconsistent threading, or special-case code paths that are hard to reason about and easy to get wrong.
 
