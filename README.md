@@ -29,7 +29,7 @@ I am relatively new to writing and reviewing Nostr protocol specs, and this work
 
 ## Table of contents
 
-- [1. NIP-TIM-1: Strict Event Validation](#xx1-nip-tim-1-strict-event-validation)
+- [1. NIP-TIM-1: Strict Event Validation](#1-nip-tim-1-strict-event-validation)
 
 <br><br>
 
