@@ -2,7 +2,7 @@
 
 
 
-# NIP-XX: Strict Event Validation
+# NIP-TIM-1: Strict Event Validation
 
 `draft` `optional` `client` `relay`
 
