@@ -22,6 +22,8 @@ The list also touches broader application concerns such as moderation signals, c
 
 Taken together, this work sketches a version of Nostr where behavior is less dependent on undocumented assumptions, relay quirks, or client guesswork. The protocol remains simple at its core, but the edges are sharper. Failures are easier to reason about, state is easier to reconstruct, and different implementations are more likely to agree on what the data means.
 
+If this direction holds, it becomes practical to build applications that need stronger guarantees without falling back to centralized infrastructure. That includes multi-client apps where profiles, settings, and lists reliably converge, communities with portable moderation and governance, marketplaces that can issue receipts and resolve disputes without a trusted backend, messaging and coordination tools that survive relay loss or network partitions, and systems that can prove authorship, delivery, or payment without relying on private databases. More broadly, it enables apps to assume less about relay behavior, to operate safely under partial failure, and to share data and trust signals across clients in a predictable way.
+
 I am relatively new to writing and reviewing Nostr protocol specs, and this work is explicitly exploratory. The drafts here are intended as a starting point for discussion, not as final proposals. I am especially interested in feedback on overlap with existing NIPs or discussions, where these ideas may already be covered, where they might be too strict or too heavy, and where they do not fit the direction the Nostr ecosystem is moving.
 
 
