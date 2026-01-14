@@ -4,7 +4,7 @@
 
 # NIPs by Tim
 
-This repo contains a set of draft NIPs, all work in progress. Together they explore how Nostr could gain stronger and more predictable behavior around identity, permissions, ordering, privacy, and durable state across peers, without changing Nostr’s core model or culture. The starting point for this work is a set of ideas I previously developed for 2WAY. In 2WAY, these ideas are enforced by design through strict boundaries, ordered pipelines, and deterministic rules, so that different implementations reliably arrive at the same result.
+This repo contains a set of draft NIPs, all work in progress. Together they explore how Nostr could gain stronger and more predictable behavior around identity, permissions, ordering, privacy, and durable state across peers, without changing Nostr’s core model or culture. The starting point for this work is a set of ideas I previously developed for 2WAY (https://github.com/livegnik/2way-poc-design). In 2WAY, these ideas are enforced by design through strict boundaries, ordered pipelines, and deterministic rules, so that different implementations reliably arrive at the same result.
 
 Here, those same ideas are used as guidance rather than as something to copy directly. Instead of importing 2WAY as a system, I am using it as a source of constraints and questions. For each idea, the goal is to ask how it could make sense inside Nostr’s existing event model and relay ecosystem. That means translating concepts like explicit ingress pipelines, deterministic handling of replaceable events, or clear deletion and visibility rules into concrete Nostr terms such as event types, tags, relay behavior, client expectations, and well-defined failure cases.
 
