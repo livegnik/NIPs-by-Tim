@@ -39,7 +39,7 @@ I am relatively new to writing and reviewing Nostr protocol specs, and this work
 
 NIP draft: [NIP-TIM-1: Strict Event Validation](nip-tim-1-strict-event-validation.md)
 
-NIP proposal: (https://github.com/nostr-protocol/nips/issues/2188)
+NIP proposal: https://github.com/nostr-protocol/nips/issues/2188
 
 ### Strict and uniform event validation
 
