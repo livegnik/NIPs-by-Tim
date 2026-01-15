@@ -47,7 +47,7 @@ NIP draft discussion: https://github.com/nostr-protocol/nips/issues/2188
 
 #### How it's related to 2WAY
 
-2WAY is built around the idea that raw inbound data is never "application state" until it has passed a strict, consistent pipeline. The system boundary is enforced by shared managers and engines so that every consumer sees the same canonical shape and meaning. That is exactly the role this NIP plays for Nostr: it formalizes the ["Incoming Engine boundary" concept](https://github.com/livegnik/2way-poc-design/blob/master/02-architecture/managers/10-network-manager.md#42-bastion-engine), where parsing, canonicalization, and acceptance are centralized and deterministic, rather than scattered across feature code paths.
+2WAY is built around the idea that raw inbound data is never "application state" until it has passed a strict, consistent pipeline. The system boundary is enforced by shared managers and engines so that every consumer sees the same canonical shape and meaning. That is exactly the role this NIP plays for Nostr: it formalizes the ["Incoming Engine boundary" concept](https://github.com/livegnik/2way-poc-design/blob/master/02-architecture/managers/10-network-manager.md#43-incoming-engine), where parsing, canonicalization, and acceptance are centralized and deterministic, rather than scattered across feature code paths.
 
 #### The NIP idea
 
