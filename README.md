@@ -67,13 +67,13 @@ The goal is not to make Nostr more complex, but to reduce accidental complexity.
 
 #### What this NIP solves in general
 
-Nostr has a recurring class of bugs that come from a simple root cause. The protocol defines what an event looks like, but it does not define, in a strict way, how events must be validated in practice. As a result, different clients and relays quietly disagree on what “valid” means.
+Nostr has a recurring class of bugs that come from a simple root cause. The protocol defines what an event looks like, but it does not define, in a strict way, how events must be validated in practice. As a result, different clients and relays quietly disagree on what "valid" means.
 
 Some implementations accept malformed input and try to compensate later. Others enforce undocumented constraints. Some verify signatures early, others after parsing or storage. These differences sound small, but they leak upward. Every app feature ends up carrying defensive code because the lower layers cannot be trusted to agree. Threading breaks, indexing diverges, notifications misfire, and the same event can be treated as valid in one place and rejected in another.
 
 NIP-01 defines the event shape and cryptographic rules, but it does not define a concrete validation pipeline. In reality, every client and relay already runs such a pipeline, but it is implicit, inconsistently documented, and different across implementations. That allows two compliant stacks to see the same event and reach different conclusions about whether it should be stored, rendered, or even identified as the same event.
 
-This problem shows up in real bugs and discussions. Small differences in JSON handling and id derivation have produced mismatched event IDs and incompatible behavior ([https://github.com/nostr-protocol/nips/issues/354](https://github.com/nostr-protocol/nips/issues/354)). Libraries have shipped code where relays reject events as having an “invalid event id” because validation steps were applied in a different order ([https://github.com/rust-nostr/nostr/issues/227](https://github.com/rust-nostr/nostr/issues/227)). These are not application-level mistakes. They are failures to agree on validation earlier in the stack.
+This problem shows up in real bugs and discussions. Small differences in JSON handling and id derivation have produced mismatched event IDs and incompatible behavior ([https://github.com/nostr-protocol/nips/issues/354](https://github.com/nostr-protocol/nips/issues/354)). Libraries have shipped code where relays reject events as having an "invalid event id" because validation steps were applied in a different order ([https://github.com/rust-nostr/nostr/issues/227](https://github.com/rust-nostr/nostr/issues/227)). These are not application-level mistakes. They are failures to agree on validation earlier in the stack.
 
 This NIP does not change the event format. It makes the validation process explicit, ordered, and uniform, so that all implementations converge on the same definition of valid input and the ecosystem can stop compensating for inconsistency higher up.
 
