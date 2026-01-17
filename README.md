@@ -79,7 +79,7 @@ This NIP does not change the event format. It makes the validation process expli
 
 #### Practical example of problems
 
-A client receives an event where `tags` is present but contains an element that is not an array of strings, for example a nested object or a null. One client ignores it and continues. Another client tries to parse an `e` or `p` tag and fails a cast, breaking thread reconstruction. A relay might accept it and store it, then other clients repeatedly trip on it forever. Or the opposite: one relay rejects it but another accepts it, so users see inconsistent timelines depending on relay choice. With XX1, all implementations reject it at the same stage with the same meaning. The event never becomes storable or renderable, and the bug does not propagate.
+A client receives an event where `tags` is present but contains an element that is not an array of strings, for example a nested object or a null. One client ignores it and continues. Another client tries to parse an `e` or `p` tag and fails a cast, breaking thread reconstruction. A relay might accept it and store it, then other clients repeatedly trip on it forever. Or the opposite: one relay rejects it but another accepts it, so users see inconsistent timelines depending on relay choice. With NIP-TIM-1, all implementations reject it at the same stage with the same meaning. The event never becomes storable or renderable, and the bug does not propagate.
 
 #### What other NIPs this NIP relies on
 
